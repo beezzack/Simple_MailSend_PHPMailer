@@ -3,6 +3,7 @@
     require_once('./PHPMailer/PHPMailerAutoload.php');
 	function sendmail($whoborrow,$book){
 		include("conn_mysql.php");
+		//hi
 		$inquiry_mail = "SELECT email FROM lablist WHERE name = '".$whoborrow."'";
 		$inquiry_result = mysqli_query($db_link,$inquiry_mail);
 		$email = mysqli_fetch_array($inquiry_result);
